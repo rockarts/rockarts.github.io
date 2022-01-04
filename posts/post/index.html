@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post | Steven Rockarts</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Post</span></h1>
+
+<h2 class="date">2022/01/03</h2>
+</div>
+
+<main>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">it</span>(<span style="color:#e6db74">&#39;cant read items in the records collection if not logged in&#39;</span>, <span style="color:#66d9ef">async</span> () =&gt;{
+        <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">testEnv</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">initializeTestEnvironment</span>({
+            <span style="color:#a6e22e">projectId</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">PROJECT_ID</span>,
+            <span style="color:#a6e22e">firestore</span><span style="color:#f92672">:</span> {
+                <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;localhost&#39;</span>,
+                <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">8080</span>,
+              <span style="color:#a6e22e">rules</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">readFileSync</span>(<span style="color:#e6db74">&#34;../firestore.rules&#34;</span>, <span style="color:#e6db74">&#34;utf8&#34;</span>),
+            },
+          });
+        
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">testEnv</span>.<span style="color:#a6e22e">unauthenticatedContext</span>();
+
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firestore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">firestore</span>();
+        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">records</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firestore</span>.<span style="color:#a6e22e">collection</span>(<span style="color:#e6db74">&#39;/records&#39;</span>);
+        
+        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">assertFails</span>(<span style="color:#a6e22e">records</span>.<span style="color:#a6e22e">get</span>());
+    });
+
+</code></pre></div><p>Content</p>
+
+</main>
+
+  <footer>
+  
+  
+  </footer>
+  </body>
+</html>
+

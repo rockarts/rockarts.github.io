@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Steven Rockarts</title>
+    <link>http://rockarts.github.io/posts/</link>
+    <description>Recent content in Posts on Steven Rockarts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Jan 2022 20:57:55 -0700</lastBuildDate><atom:link href="http://rockarts.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post</title>
+      <link>http://rockarts.github.io/posts/post/</link>
+      <pubDate>Mon, 03 Jan 2022 20:57:55 -0700</pubDate>
+      
+      <guid>http://rockarts.github.io/posts/post/</guid>
+      <description>it(&amp;#39;cant read items in the records collection if not logged in&amp;#39;, async () =&amp;gt;{ let testEnv = await initializeTestEnvironment({ projectId: PROJECT_ID, firestore: { host: &amp;#39;localhost&amp;#39;, port: 8080, rules: readFileSync(&amp;#34;../firestore.rules&amp;#34;, &amp;#34;utf8&amp;#34;), }, }); const context = testEnv.unauthenticatedContext(); const firestore = context.firestore(); const records = firestore.collection(&amp;#39;/records&amp;#39;); await assertFails(records.get()); }); Content</description>
+    </item>
+    
+  </channel>
+</rss>
