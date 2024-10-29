@@ -1,43 +1,233 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-	<meta name="generator" content="Hugo 0.91.2" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Steven Rockarts | Steven Rockarts</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    
-  </head>
+<html lang="en" class="dark scroll-smooth">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-    </ul>
-    <hr/>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven Rockarts - Mobile Development Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          animation: {
+            'gradient': 'gradient 8s linear infinite',
+          },
+          keyframes: {
+            gradient: {
+              '0%, 100%': {
+                'background-size': '200% 200%',
+                'background-position': 'left center'
+              },
+              '50%': {
+                'background-size': '200% 200%',
+                'background-position': 'right center'
+              }
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
 
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+  <!-- Theme Toggle -->
+  <button onclick="document.documentElement.classList.toggle('dark')"
+    class="fixed top-4 right-4 z-50 p-2 bg-gray-200 dark:bg-gray-700 rounded-full shadow-lg hover:scale-110 transition-transform">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden dark:block text-yellow-300" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 block dark:hidden text-gray-700" fill="none"
+      viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+    </svg>
+  </button>
 
+  <!-- Hero Section -->
+  <header
+    class="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-900 dark:via-purple-900 dark:to-indigo-900 animate-gradient">
+    <div class="absolute inset-0 bg-[url('/api/placeholder/20/20')] opacity-20"></div>
+    <div class="relative container mx-auto px-4 py-24">
+      <div class="text-center">
+        <div class="inline-block mb-6">
+          <img src="/api/placeholder/150/150" alt="Profile"
+            class="w-32 h-32 rounded-full border-4 border-white dark:border-gray-800 shadow-xl" />
+        </div>
+        <h1 class="text-5xl font-bold mb-4 text-white">Steven Rockarts</h1>
+        <p class="text-xl mb-8 text-blue-100">Mobile App Developer</p>
+        <div class="flex justify-center space-x-4">
+          <a href="#contact"
+            class="bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-full font-medium hover:scale-105 transition-transform shadow-lg">
+            Contact Me
+          </a>
+          <a href="#portfolio"
+            class="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white/10 transition-colors">
+            View Work
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
 
+  <!-- Navigation -->
+  <nav class="sticky top-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg z-50">
+    <div class="container mx-auto px-4">
+      <ul class="flex justify-center space-x-8 py-4">
+        <li><a href="#about"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+        </li>
+        <li><a href="#portfolio"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Portfolio</a>
+        </li>
+        <li><a href="#skills"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Skills</a>
+        </li>
+        <li><a href="#contact"
+            class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- About Section -->
+  <section id="about" class="py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">About Me</h2>
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl">
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+            Mobile developer with expertise in creating intuitive and performant applications for iOS and Android
+            platforms.
+            Passionate about creating exceptional user experiences and solving complex problems through elegant mobile
+            solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-24 bg-gray-50 dark:bg-gray-800/50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">Featured Apps</h2>
 
-<ul>
-  
-  
-  
-  <li>
-    <span class="date">2022/01/03</span>
-    <a href="/posts/post/">Post</a>
-  </li>
-  
-</ul>
+      <!-- App Showcase -->
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <!-- App 1 -->
+        <div class="group">
+          <div
+            class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="relative">
+              <img src="/api/placeholder/300/600" alt="App 1 Screenshot"
+                class="rounded-xl w-full mb-4 group-hover:scale-[1.02] transition-transform duration-300" />
+              <div class="absolute top-4 right-4 flex space-x-2">
+                <img src="/api/placeholder/30/30" alt="App Store" class="h-8 hover:scale-110 transition-transform" />
+                <img src="/api/placeholder/30/30" alt="Play Store" class="h-8 hover:scale-110 transition-transform" />
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-white">App Name 1</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Brief description of the app, its purpose, and your role in development.
+              Key features and technologies used.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm font-medium">React
+                Native</span>
+              <span
+                class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm font-medium">Firebase</span>
+              <span
+                class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm font-medium">Redux</span>
+            </div>
+          </div>
+        </div>
 
-  <footer>
-  
-  
-  </footer>
-  </body>
-</html>
+        <!-- App 2 -->
+        <div class="group">
+          <div
+            class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="relative">
+              <img src="/api/placeholder/300/600" alt="App 2 Screenshot"
+                class="rounded-xl w-full mb-4 group-hover:scale-[1.02] transition-transform duration-300" />
+              <div class="absolute top-4 right-4 flex space-x-2">
+                <img src="/api/placeholder/30/30" alt="App Store" class="h-8 hover:scale-110 transition-transform" />
+                <img src="/api/placeholder/30/30" alt="Play Store" class="h-8 hover:scale-110 transition-transform" />
+              </div>
+            </div>
+            <h3 class="text-2xl font-bold mb-3 text-gray-800 dark:text-white">App Name 2</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">
+              Brief description of the app, its purpose, and your role in development.
+              Key features and technologies used.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm font-medium">Swift</span>
+              <span
+                class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm font-medium">SwiftUI</span>
+              <span
+                class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full text-sm font-medium">Core
+                Data</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white">Skills & Technologies</h2>
+      <div class="max-w-4xl mx-auto space-y-12">
+        <!-- Mobile Development -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Mobile Development</h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">iOS
+              Development</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">Android
+              Development</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">React
+              Native</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">Flutter</span>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Programming Languages</h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">Swift</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">Kotlin</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">JavaScript</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">TypeScript</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl">
+          <h3 class="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Tools & Platforms</h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">Xcode</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">Android
+              Studio</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">Firebase</span>
+            <span
+              class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-shadow">App
+              Store Connect
